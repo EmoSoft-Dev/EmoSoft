@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak Kami - EmoSoft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">EmoSoft</div>
+      <nav>
+        <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
+          <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
+          <li role="none"><a role="menuitem" href="tools.html">Tools</a></li>
+          <li role="none"><a role="menuitem" href="#">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html" class="active">Kontak</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container contact-section">
+    <h1>Hubungi Kami</h1>
+    <p class="intro">Punya pertanyaan, saran, atau butuh bantuan? Jangan ragu untuk menghubungi kami melalui formulir di bawah ini atau detail kontak lainnya.</p>
+
+    <div class="contact-content">
+      <div class="contact-form-container">
+        <h2>Kirim Pesan</h2>
+        <form id="contactForm" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
+          </div>
+          <div class="form-group">
+            <label for="email">Email Anda:</label>
+            <input type="email" id="email" name="email" required placeholder="Masukkan email aktif Anda">
+          </div>
+          <div class="form-group">
+            <label for="subject">Subjek:</label>
+            <input type="text" id="subject" name="subject" placeholder="Subjek pesan Anda">
+          </div>
+          <div class="form-group">
+            <label for="message">Pesan Anda:</label>
+            <textarea id="message" name="message" rows="6" required placeholder="Tulis pesan Anda di sini"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Kirim Pesan</button>
+        </form>
+      </div>
+
+      <div class="contact-info-container">
+        <h2>Informasi Kontak</h2>
+        <div class="info-item">
+          <span class="icon">📧</span>
+          <p>Email: <a href="mailto:emonsoft@gmail.com">emosoft@gmail.com</a></p>
+        </div>
+        <div class="info-item">
+          <span class="icon">📞</span>
+          <p>Telepon: <a href="tel:+6285198224557">+62 851-9822-4557</a></p>
+        </div>
+        <div class="info-item">
+          <span class="icon">📍</span>
+          <p>Alamat: Jl. Digital No. 123, Kota Cyber, Indonesia</p>
+        </div>
+        <div class="info-item">
+          <span class="icon">⏰</span>
+          <p>Jam Kerja: Senin - Jumat, 09:00 - 17:00 WIB</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 EmoSoft. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Instagram">📸</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tools - EmoSoft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">EmoSoft</div>
+      <nav>
+        <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
+          <li role="none"><a role="menuitem" href="index.html" class="active">Beranda</a></li>
+          <li role="none"><a role="menuitem" href="tools.html">Tools</a></li>
+          <li role="none"><a role="menuitem" href="blog.html">Blog</a></li> <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container tools-section">
+    <h1>Tools EmoSoft</h1>
+    <p class="intro">Gunakan berbagai tools digital praktis dan gratis untuk kebutuhanmu.</p>
+
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>Panel Pterodactyl</h3>
+        <p>Akses panel hosting server game berbasis Pterodactyl dengan fitur manajemen lengkap dan antarmuka modern.</p>
+        <button onclick="window.location.href='https://panelnano.biz.id'">Buka Panel</button>
+      </div>
+
+      <div class="tool-card">
+        <h3>Toko Script WhatsApp</h3>
+        <p>Pilih script bot WhatsApp sesuai kebutuhanmu. Semua script mudah digunakan dan siap pakai.</p>
+        <div class="script-list">
+          <div class="script-item">
+            <strong>Bot WhatsApp Premium</strong>
+            <p>Fitur lengkap, support multi-device, auto-reply, anti-link, dan lainnya.</p>
+            <button onclick="window.location.href='https://wa.me/6285198224557?text=Min%20saya%20mau%20beli%20Bot%20Premium'">Beli via WA</button>
+          </div>
+          <div class="script-item">
+            <strong>Bot WhatsApp Sederhana</strong>
+            <p>Cocok untuk pemula, bot ringan dan mudah dipasang.</p>
+            <button onclick="window.location.href='https://wa.me/6285198224557?text=Min%20saya%20mau%20beli%20Bot%20Sederhana'">Beli via WA</button>
+          </div>
+          <div class="script-item">
+            <strong>Script Auto Downloader</strong>
+            <p>Bot untuk download media dari TikTok, IG, YouTube tanpa watermark.</p>
+            <button onclick="window.location.href='https://wa.me/6285198224557?text=Min%20saya%20mau%20beli%20Script%20Downloader'">Beli via WA</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-card server-monitor-card">
+        <h3>Status Server</h3>
+        <p>Lihat status dan penggunaan sumber daya server game EmoSoft secara real-time.</p>
+        <div class="server-stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">Address</span>
+            <span class="stat-value">EmonSoft</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Uptime</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">CPU Load</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Memory</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item disk-item">
+            <span class="stat-label">Disk</span>
+            <span class="stat-value">543.83 MiB / 5.96 GiB</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Network (Inbound)</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Network (Outbound)</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+        </div>
+        <div class="server-graphs">
+            <div class="graph-placeholder">
+                <p>CPU Load</p>
+                <div class="graph-area"></div>
+            </div>
+            <div class="graph-placeholder">
+                <p>Memory</p>
+                <div class="graph-area"></div>
+            </div>
+            <div class="graph-placeholder">
+                <p>Network</p>
+                <div class="graph-area"></div>
+            </div>
+        </div>
+        <button onclick="alert('Fitur ini menampilkan status server secara statis. Untuk data real-time, pengembangan lebih lanjut diperlukan!')">Lihat Detail</button>
+      </div>
+      </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 EmoSoft. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook">📘</a>
+        <a href="#" aria-label="Twitter">🐦</a>
+        <a href="#" aria-label="Instagram">📸</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

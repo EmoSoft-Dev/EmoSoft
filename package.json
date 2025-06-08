@@ -1,0 +1,14 @@
+{
+  "name": "emosoft-website",
+  "version": "1.0.0",
+  "description": "Website EmoSoft - Solusi Tools Digital",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
