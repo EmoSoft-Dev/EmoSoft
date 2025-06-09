@@ -3,73 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>EmoSoft - Solusi Tools Digital</title>
+  <title>EmoSoft - Solusi Tools Digital Inovatif</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">EmoSoft</div>
+      <div class="logo" id="site-logo">EmoSoft</div>
       <nav>
         <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
           <li role="none"><a role="menuitem" href="index.html" class="active">Beranda</a></li>
-          <li role="none"><a role="menuitem" href="tools.html">Tools</a></li>
-          <li role="none"><a role="menuitem" href="blog.html">Blog</a></li> <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="shop.html">Shop</a></li> <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html">Donasi</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1>Solusi Tools Digital untuk Semua Kebutuhanmu</h1>
-        <p>EmoSoft menyediakan berbagai tools online mudah digunakan dan terpercaya.</p>
-        <a href="tools.html" class="btn-primary">Mulai Gunakan Tools</a>
+  <main>
+    <section class="hero-new">
+      <div class="container hero-content-new">
+        <div class="hero-text-new">
+          <h2>Maksimalkan Potensimu dengan EmoSoft</h2>
+          <p>Kami menyediakan solusi digital inovatif untuk meningkatkan produktivitas, mengelola server Anda, dan mengoptimalkan komunikasi digital.</p>
+          <div class="hero-buttons">
+            <a href="shop.html" class="btn-primary">Mulai Sekarang</a> <a href="kontak.html" class="btn-outline">Hubungi Kami</a>
+          </div>
+        </div>
+        <div class="hero-image-new">
+          <img src="assets/hero-image.png" alt="Ilustrasi Inovasi Digital" />
+        </div>
       </div>
-      <div class="hero-image">
-        <img src="assets/hero-image.png" alt="EmoSoft Tools" />
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="features container">
-    <h2>Fitur Unggulan</h2>
-    <div class="card-container">
-      <div class="card">
-        <div class="icon">⚙️</div>
-        <h3>Mudah Digunakan</h3>
-        <p>Tools dengan tampilan simpel dan jelas, cocok untuk semua kalangan.</p>
+    <section class="why-emsoft-section container">
+      <h2 class="section-title">Mengapa Memilih EmoSoft?</h2>
+      <div class="why-items-grid">
+        <div class="why-item-card">
+          <div class="icon">🚀</div>
+          <h3>Performa Unggul</h3>
+          <p>Infrastruktur yang dioptimalkan untuk kecepatan dan stabilitas maksimal.</p>
+        </div>
+        <div class="why-item-card">
+          <div class="icon">🔒</div>
+          <h3>Keamanan Terjamin</h3>
+          <p>Prioritas utama kami adalah perlindungan data Anda dengan sistem keamanan canggih.</p>
+        </div>
+        <div class="why-item-card">
+          <div class="icon">🛠️</div>
+          <h3>Solusi Mudah Digunakan</h3>
+          <p>Antarmuka intuitif dan fitur lengkap untuk pengalaman digital yang mulus.</p>
+        </div>
+        <div class="why-item-card">
+          <div class="icon">💬</div>
+          <h3>Dukungan Responsif</h3>
+          <p>Tim support kami siap membantu Anda kapan saja untuk setiap kebutuhan.</p>
+        </div>
       </div>
-      <div class="card">
-        <div class="icon">🔒</div>
-        <h3>Aman & Terpercaya</h3>
-        <p>Kami prioritaskan keamanan data dan performa stabil.</p>
-      </div>
-      <div class="card">
-        <div class="icon">⚡</div>
-        <h3>Responsif Cepat</h3>
-        <p>Tools yang cepat dan dapat diakses dari berbagai perangkat.</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="about container">
-    <h2>Tentang EmoSoft</h2>
-    <p>EmoSoft berdedikasi menyediakan layanan tools digital terbaik dengan kemudahan akses dan kualitas terpercaya sejak 2025.</p>
-  </section>
+    <section class="solutions-section container">
+      <h2 class="section-title">Solusi EmoSoft untuk Tantangan Digital Anda</h2>
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <div class="icon">📈</div>
+          <h3>Optimalisasi Produktivitas</h3>
+          <p>Tingkatkan efisiensi kerja Anda dengan tools yang dirancang untuk menghemat waktu dan tenaga. Fokus pada hal yang penting!</p>
+          <a href="blog.html" class="btn-primary-small">Pelajari Lebih Lanjut</a>
+        </div>
+        <div class="solution-card">
+          <div class="icon">🛡️</div>
+          <h3>Keamanan & Stabilitas Digital</h3>
+          <p>Jaga aset digital Anda aman dan pastikan performa server Anda selalu optimal dengan solusi kami yang terpercaya.</p>
+          <a href="blog.html" class="btn-primary-small">Pelajari Lebih Lanjut</a>
+        </div>
+        <div class="solution-card">
+          <div class="icon">🤖</div>
+          <h3>Otomatisasi Komunikasi</h3>
+          <p>Sederhanakan interaksi Anda dengan klien dan anggota tim melalui otomatisasi cerdas berbasis script.</p>
+          <a href="blog.html" class="btn-primary-small">Pelajari Lebih Lanjut</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title">Apa Kata Pengguna Kami</h2>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"EmoSoft mengubah cara saya mengelola server. Panelnya sangat mudah digunakan dan script WA-nya benar-benar meningkatkan efisiensi bisnis saya!"</p>
+          <p class="testimonial-author">- Budi Santoso, Pemilik Game Server</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-content">
+        <h2>Siap Memulai Petualangan Digital Anda?</h2>
+        <p>Bergabunglah dengan ribuan pengguna EmoSoft yang telah merasakan kemudahan dan performa superior.</p>
+        <div class="cta-buttons">
+            <a href="kontak.html" class="btn-primary">Hubungi Kami Sekarang</a>
+            <a href="donasi.html" class="btn-outline">Donasi</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="container footer-content">
-      <p>&copy; 2025 EmoSoft. All rights reserved.</p>
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
       <div class="social-icons">
-        <a href="#" aria-label="Facebook">📘</a>
-        <a href="#" aria-label="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram">📸</a>
-        </div>
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
+      </div>
     </div>
   </footer>
 </body>

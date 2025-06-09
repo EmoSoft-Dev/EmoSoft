@@ -6,18 +6,20 @@
   <title>Kontak Kami - EmoSoft</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">EmoSoft</div>
+      <div class="logo" id="site-logo">EmoSoft</div>
       <nav>
         <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
           <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
-          <li role="none"><a role="menuitem" href="tools.html">Tools</a></li>
+          <li role="none"><a role="menuitem" href="shop.html">Shop</a></li>
           <li role="none"><a role="menuitem" href="#">Blog</a></li>
           <li role="none"><a role="menuitem" href="kontak.html" class="active">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html">Donasi</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
@@ -31,7 +33,7 @@
     <div class="contact-content">
       <div class="contact-form-container">
         <h2>Kirim Pesan</h2>
-        <form id="contactForm" action="#" method="POST">
+        <form id="contactForm" action="mailto:emosoft.mail@gmail.com" method="GET" enctype="text/plain">
           <div class="form-group">
             <label for="name">Nama Lengkap:</label>
             <input type="text" id="name" name="name" required placeholder="Masukkan nama Anda">
@@ -46,8 +48,7 @@
           </div>
           <div class="form-group">
             <label for="message">Pesan Anda:</label>
-            <textarea id="message" name="message" rows="6" required placeholder="Tulis pesan Anda di sini"></textarea>
-          </div>
+            <textarea id="message" name="body" rows="6" required placeholder="Tulis pesan Anda di sini"></textarea> </div>
           <button type="submit" class="btn-primary">Kirim Pesan</button>
         </form>
       </div>
@@ -56,15 +57,15 @@
         <h2>Informasi Kontak</h2>
         <div class="info-item">
           <span class="icon">📧</span>
-          <p>Email: <a href="mailto:emonsoft@gmail.com">emosoft@gmail.com</a></p>
+          <p>Email: <a href="mailto:emosoft.mail@gmail.com" id="contact-email-link">emosoft.mail@gmail.com</a></p>
         </div>
         <div class="info-item">
           <span class="icon">📞</span>
-          <p>Telepon: <a href="tel:+6285198224557">+62 851-9822-4557</a></p>
+          <p>Telepon: <a href="tel:+6285198224557" id="contact-phone-link">+62 851-9822-4557</a></p>
         </div>
         <div class="info-item">
           <span class="icon">📍</span>
-          <p>Alamat: Jl. Digital No. 123, Kota Cyber, Indonesia</p>
+          <p id="contact-address">Alamat: Jl. Digital No. 123, Kota Cyber, Indonesia</p>
         </div>
         <div class="info-item">
           <span class="icon">⏰</span>
@@ -76,11 +77,11 @@
 
   <footer>
     <div class="container footer-content">
-      <p>&copy; 2025 EmoSoft. All rights reserved.</p>
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
       <div class="social-icons">
-        <a href="#" aria-label="Facebook">📘</a>
-        <a href="#" aria-label="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
       </div>
     </div>
   </footer>

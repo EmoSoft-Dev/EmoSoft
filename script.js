@@ -1,26 +1,94 @@
-function toggleMenu() {
-  const nav = document.querySelector('.nav-links');
-  nav.classList.toggle('show');
-
-  const toggleButton = document.querySelector('.menu-toggle');
-  const expanded = nav.classList.contains('show');
-  toggleButton.setAttribute('aria-expanded', expanded);
-}
-
-function toggleMenu() {
-  const nav = document.querySelector('.nav-links');
-  nav.classList.toggle('show');
-
-  const toggleButton = document.querySelector('.menu-toggle');
-  const expanded = nav.classList.contains('show');
-  toggleButton.setAttribute('aria-expanded', expanded);
-}
-
-// NEW: Function to simulate real-time server data
 document.addEventListener('DOMContentLoaded', () => {
+    // --- FUNGSI GLOBAL DARI config.js ---
+    if (typeof AppConfig !== 'undefined') {
+        // Update Header Logo/Site Name
+        const siteLogo = document.getElementById('site-logo');
+        if (siteLogo) {
+            siteLogo.textContent = AppConfig.siteName;
+        }
+
+        // Update Footer
+        const footerCopyright = document.getElementById('footer-copyright');
+        if (footerCopyright) {
+            footerCopyright.textContent = `© 2025 ${AppConfig.siteName}. All rights reserved.`;
+        }
+        const socialFacebook = document.getElementById('social-facebook');
+        if (socialFacebook) {
+            socialFacebook.href = AppConfig.socialLinks.facebook;
+        }
+        const socialTwitter = document.getElementById('social-twitter');
+        if (socialTwitter) {
+            socialTwitter.href = AppConfig.socialLinks.twitter;
+        }
+        const socialInstagram = document.getElementById('social-instagram');
+        if (socialInstagram) {
+            socialInstagram.href = AppConfig.socialLinks.instagram;
+        }
+
+        // Update Kontak Page
+        const contactEmailLink = document.getElementById('contact-email-link');
+        if (contactEmailLink) {
+            contactEmailLink.href = `mailto:${AppConfig.contactEmail}`;
+            contactEmailLink.textContent = AppConfig.contactEmail;
+        }
+        const contactPhoneLink = document.getElementById('contact-phone-link');
+        if (contactPhoneLink) {
+            contactPhoneLink.href = `tel:${AppConfig.contactPhone}`;
+            contactPhoneLink.textContent = AppConfig.contactPhone;
+        }
+        const contactAddress = document.getElementById('contact-address');
+        if (contactAddress) {
+            contactAddress.textContent = `Alamat: ${AppConfig.address}`;
+        }
+
+        // Load Panel Prices on shop-panel.html and set WhatsApp links
+        const panelCards = document.querySelectorAll('.panel-card');
+        panelCards.forEach(card => {
+            const packageName = card.querySelector('h3').dataset.packageName;
+            if (AppConfig.panelPrices[packageName]) {
+                const priceElement = card.querySelector('.panel-price');
+                priceElement.textContent = AppConfig.panelPrices[packageName].display;
+
+                // Set WhatsApp link for Panel cards
+                const buyButton = card.querySelector('.buy-now-btn');
+                if (buyButton) {
+                    const whatsappText = encodeURIComponent(AppConfig.panelPrices[packageName].whatsappText);
+                    buyButton.href = `https://wa.me/${AppConfig.contactPhone}?text=${whatsappText}`;
+                }
+            }
+        });
+
+        // Load Script Prices and WhatsApp links on shop-script.html
+        const scriptCards = document.querySelectorAll('.script-card');
+        scriptCards.forEach(card => {
+            const scriptName = card.querySelector('h3').dataset.scriptName;
+            if (AppConfig.scriptPrices[scriptName]) {
+                const priceElement = card.querySelector('.script-price');
+                priceElement.textContent = AppConfig.scriptPrices[scriptName].display;
+
+                const buyButton = card.querySelector('.buy-now-btn');
+                if (buyButton) {
+                    const whatsappText = encodeURIComponent(AppConfig.scriptPrices[scriptName].whatsappText);
+                    buyButton.href = `https://wa.me/${AppConfig.contactPhone}?text=${whatsappText}`;
+                }
+            }
+        });
+    }
+
+    // --- FUNGSI UNTUK MENU TOGGLE (TETAP) ---
+    window.toggleMenu = function() {
+        const nav = document.querySelector('.nav-links');
+        nav.classList.toggle('show');
+
+        const toggleButton = document.querySelector('.menu-toggle');
+        const expanded = nav.classList.contains('show');
+        toggleButton.setAttribute('aria-expanded', expanded);
+    }
+
+    // --- FUNGSI UNTUK SIMULASI STATUS SERVER (TETAP) ---
     const serverMonitorCard = document.querySelector('.server-monitor-card');
 
-    if (serverMonitorCard) { // Only run if the server monitor card exists on the page
+    if (serverMonitorCard) {
         const cpuLoadValue = serverMonitorCard.querySelector('.stat-item:nth-child(3) .stat-value');
         const memoryValue = serverMonitorCard.querySelector('.stat-item:nth-child(4) .stat-value');
         const diskValue = serverMonitorCard.querySelector('.stat-item:nth-child(5) .stat-value');
@@ -31,37 +99,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const memoryGraphArea = serverMonitorCard.querySelector('.graph-placeholder:nth-child(2) .graph-area');
         const networkGraphArea = serverMonitorCard.querySelector('.graph-placeholder:nth-child(3) .graph-area');
 
-        let uptimeSeconds = 0; // Start uptime counter from 0
+        let uptimeSeconds = 0;
 
         function updateServerStats() {
-            // Simulate CPU Load (0-100%)
             const currentCpu = (Math.random() * 100).toFixed(2);
             cpuLoadValue.textContent = `${currentCpu}%`;
-            cpuLoadValue.classList.toggle('status-offline', parseFloat(currentCpu) === 0); // Remove offline if not 0
+            cpuLoadValue.classList.toggle('status-offline', parseFloat(currentCpu) === 0);
 
-            // Simulate Memory (e.g., 2GB total, current use 0-2048MiB)
-            const totalMemoryMiB = 2048; // Assume 2GB total for simulation
+            const totalMemoryMiB = 2048;
             const currentMemoryMiB = (Math.random() * totalMemoryMiB).toFixed(0);
             memoryValue.textContent = `${currentMemoryMiB} MiB / ${totalMemoryMiB} MiB`;
             memoryValue.classList.toggle('status-offline', parseFloat(currentMemoryMiB) === 0);
 
-            // Simulate Disk (initial disk remains mostly constant, but we can show usage changing)
-            // For simplicity, we'll keep the total disk fixed as it usually is,
-            // but you could change the used amount if needed.
             const totalDiskGiB = 5.96;
-            const currentDiskMiB = (Math.random() * 1024 * 0.5).toFixed(2); // Simulate usage up to 0.5GB
+            const currentDiskMiB = (Math.random() * 1024 * 0.5).toFixed(2);
             diskValue.textContent = `${currentDiskMiB} MiB / ${totalDiskGiB} GiB`;
 
-            // Simulate Network (random Bytes/s)
-            const inBytes = (Math.random() * 1000).toFixed(0); // up to 1KB/s
-            const outBytes = (Math.random() * 1000).toFixed(0); // up to 1KB/s
+            const inBytes = (Math.random() * 1000).toFixed(0);
+            const outBytes = (Math.random() * 1000).toFixed(0);
             networkInValue.textContent = `${inBytes} B/s`;
             networkInValue.classList.toggle('status-offline', parseFloat(inBytes) === 0);
             networkOutValue.textContent = `${outBytes} B/s`;
             networkOutValue.classList.toggle('status-offline', parseFloat(outBytes) === 0);
 
-            // Update Uptime
-            uptimeSeconds += 5; // Assuming update every 5 seconds
+            uptimeSeconds += 1;
             const days = Math.floor(uptimeSeconds / (3600 * 24));
             const hours = Math.floor((uptimeSeconds % (3600 * 24)) / 3600);
             const minutes = Math.floor((uptimeSeconds % 3600) / 60);
@@ -77,39 +138,47 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 uptimeDisplay.textContent = `${seconds}s`;
             }
-            uptimeDisplay.classList.remove('status-offline'); // Always show uptime if running
+            uptimeDisplay.classList.remove('status-offline');
         }
 
-        // Simulate graph changes (simple color fill for visual effect)
         function updateGraphVisuals() {
-            // CPU Graph: fill based on currentCpu value
             const cpuFill = parseFloat(cpuLoadValue.textContent) + '%';
-            cpuGraphArea.innerHTML = `<div style="width: ${cpuFill}; height: 100%; background: linear-gradient(90deg, #4CAF50, #8BC34A); border-radius: 5px;"></div>`;
-            cpuGraphArea.style.justifyContent = 'flex-start'; // Align content to start
+            const cpuBar = cpuGraphArea.querySelector('div');
+            if (!cpuBar) {
+                cpuGraphArea.innerHTML = `<div style="width: ${cpuFill}; height: 100%; background: linear-gradient(90deg, #4CAF50, #8BC34A); border-radius: 5px;"></div>`;
+            } else {
+                cpuBar.style.width = cpuFill;
+            }
+            cpuGraphArea.style.justifyContent = 'flex-start';
 
-            // Memory Graph: fill based on currentMemoryMiB
             const currentMem = parseFloat(memoryValue.textContent);
             const totalMem = parseFloat(memoryValue.textContent.split('/')[1]);
             const memFill = (currentMem / totalMem * 100) + '%';
-            memoryGraphArea.innerHTML = `<div style="width: ${memFill}; height: 100%; background: linear-gradient(90deg, #2196F3, #03A9F4); border-radius: 5px;"></div>`;
-            memoryGraphArea.style.justifyContent = 'flex-start'; // Align content to start
+            const memBar = memoryGraphArea.querySelector('div');
+            if (!memBar) {
+                memoryGraphArea.innerHTML = `<div style="width: ${memFill}; height: 100%; background: linear-gradient(90deg, #2196F3, #03A9F4); border-radius: 5px;"></div>`;
+            } else {
+                memBar.style.width = memFill;
+            }
+            memoryGraphArea.style.justifyContent = 'flex-start';
 
-            // Network Graph: combined simple fill (e.g., higher activity means fuller bar)
             const inBytes = parseFloat(networkInValue.textContent);
             const outBytes = parseFloat(networkOutValue.textContent);
-            const networkActivity = (inBytes + outBytes) / 2000 * 100; // Normalize to 100% based on max 2000B/s
-            networkGraphArea.innerHTML = `<div style="width: ${networkActivity}%; height: 100%; background: linear-gradient(90deg, #FFC107, #FFEB3B); border-radius: 5px;"></div>`;
-            networkGraphArea.style.justifyContent = 'flex-start'; // Align content to start
+            const networkActivity = (inBytes + outBytes) / 2000 * 100;
+            const networkBar = networkGraphArea.querySelector('div');
+            if (!networkBar) {
+                networkGraphArea.innerHTML = `<div style="width: ${networkActivity}%; height: 100%; background: linear-gradient(90deg, #FFC107, #FFEB3B); border-radius: 5px;"></div>`;
+            } else {
+                networkBar.style.width = `${networkActivity}%`;
+            }
+            networkGraphArea.style.justifyContent = 'flex-start';
         }
 
-        // Initial update
         updateServerStats();
         updateGraphVisuals();
-
-        // Update every 5 seconds (5000 milliseconds)
         setInterval(() => {
             updateServerStats();
             updateGraphVisuals();
-        }, 5000);
+        }, 1000);
     }
 });

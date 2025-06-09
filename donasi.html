@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donasi - EmoSoft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo" id="site-logo">EmoSoft</div>
+      <nav>
+        <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
+          <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
+          <li role="none"><a role="menuitem" href="shop.html">Shop</a></li> <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html" class="active">Donasi</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container donation-section">
+    <h1>Dukung EmoSoft dengan Donasi Anda</h1>
+    <p class="intro">Setiap kontribusi, sekecil apapun, sangat berarti bagi kami untuk terus mengembangkan tools digital yang inovatif dan gratis untuk Anda.</p>
+
+    <div class="donation-methods-grid">
+      
+      <div class="donation-card">
+        <img src="assets/qrislogo.png" alt="QRIS Logo" class="payment-logo">
+        <h3>QRIS (Semua E-Wallet & Bank)</h3>
+        <p>Pindai QR code ini dengan aplikasi e-wallet (DANA, OVO, ShopeePay, GoPay, LinkAja, dll.) atau mobile banking favorit Anda.</p>
+        <img src="assets/qris.png" alt="QRIS Code" class="qris-image" id="qrisImage">
+        <p class="account-info">Nama Merchant: **EMOSOFT DIGITAL**</p>
+        <p class="account-info">Nominal: Bebas (Min. Rp 1.000)</p>
+        <button onclick="zoomQRIS()">Perbesar QRIS</button>
+      </div>
+
+      <div class="donation-card">
+        <img src="assets/dana.png" alt="DANA Logo" class="payment-logo">
+        <h3>Donasi via DANA</h3>
+        <p>Kirim donasi Anda langsung melalui aplikasi DANA.</p>
+        <p class="account-info">Nomor DANA: **085702272720**</p>
+        <p class="account-info">Atas Nama: **REON NUR WAHYU**</p>
+        <button onclick="copyToClipboard('085702272720', 'Nomor DANA')" class="copy-btn">Salin Nomor DANA</button>
+      </div>
+
+      <div class="donation-card">
+        <img src="assets/ovo.png" alt="OVO Logo" class="payment-logo">
+        <h3>Donasi via OVO</h3>
+        <p>Kirim donasi Anda langsung melalui aplikasi OVO.</p>
+        <p class="account-info">Nomor OVO: **085198224557**</p>
+        <p class="account-info">Atas Nama: **REON NUR WAHYU**</p>
+        <button onclick="copyToClipboard('085198224557', 'Nomor OVO')" class="copy-btn">Salin Nomor OVO</button>
+      </div>
+
+      <div class="donation-card">
+        <img src="assets/shopeepay.png" alt="ShopeePay Logo" class="payment-logo">
+        <h3>Donasi via ShopeePay</h3>
+        <p>Kirim donasi Anda langsung melalui aplikasi ShopeePay.</p>
+        <p class="account-info">Nomor ShopeePay: **085198224557**</p>
+        <p class="account-info">Atas Nama: **REON NUR WAHYU**</p>
+        <button onclick="copyToClipboard('085198224557', 'Nomor ShopeePay')" class="copy-btn">Salin Nomor ShopeePay</button>
+      </div>
+
+      <div class="donation-card">
+        <img src="assets/seabank.png" alt="SeaBank Logo" class="payment-logo">
+        <h3>Donasi via SeaBank</h3>
+        <p>Kirim donasi Anda langsung melalui transfer ke SeaBank.</p>
+        <p class="account-info">No. Rekening: **901772470832**</p>
+        <p class="account-info">Atas Nama: **REON NUR WAHYU**</p>
+        <p class="account-info">Bank: **SeaBank**</p>
+        <button onclick="copyToClipboard('901772470832', 'No. Rekening SeaBank')" class="copy-btn">Salin Nomor Rekening</button>
+      </div>
+    </div>
+
+    <section class="why-donate-section">
+        <h2>Mengapa Donasi ke EmoSoft?</h2>
+        <p>Donasi Anda membantu kami dalam berbagai hal:</p>
+        <ul>
+            <li>**Pengembangan Fitur Baru:** Membangun tools yang lebih canggih dan berguna.</li>
+            <li>**Pemeliharaan Server:** Menjaga tools tetap online dan responsif.</li>
+            <li>**Dukungan Komunitas:** Memberikan bantuan dan panduan terbaik kepada pengguna.</li>
+            <li>**Inovasi Berkelanjutan:** Mendorong penelitian dan pengembangan teknologi digital terbaru.</li>
+        </ul>
+        <p class="thank-you-message">Kami sangat berterima kasih atas setiap dukungan yang Anda berikan. Anda adalah bagian dari perjalanan EmoSoft!</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="qrisOverlay" class="qris-overlay" onclick="closeQRISZoom()">
+    <div class="qris-overlay-content">
+      <span class="close-btn" onclick="closeQRISZoom(event)">×</span>
+      <img src="assets/qris-placeholder.png" alt="QRIS Code Zoomed" id="qrisZoomedImage">
+      <p>Pindai QRIS ini dengan aplikasi pembayaran Anda.</p>
+      <button onclick="downloadQRIS()">Unduh QRIS</button>
+    </div>
+  </div>
+
+  <script>
+    function copyToClipboard(text, label) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert(label + ' berhasil disalin: ' + text);
+      }).catch(err => {
+        console.error('Gagal menyalin: ', err);
+        alert('Gagal menyalin ' + label + '. Silakan salin secara manual.');
+      });
+    }
+
+    // Fungsi untuk Zoom QRIS
+    function zoomQRIS() {
+      const qrisOverlay = document.getElementById('qrisOverlay');
+      const qrisImage = document.getElementById('qrisImage');
+      const qrisZoomedImage = document.getElementById('qrisZoomedImage');
+
+      qrisZoomedImage.src = qrisImage.src;
+      qrisOverlay.style.display = 'flex';
+    }
+
+    // Fungsi untuk menutup Zoom QRIS (diperbarui untuk menghindari event bubbling)
+    function closeQRISZoom(event) {
+      if (event && event.target !== event.currentTarget) {
+        return;
+      }
+      const qrisOverlay = document.getElementById('qrisOverlay');
+      qrisOverlay.style.display = 'none';
+    }
+
+    // Fungsi untuk Download QRIS
+    function downloadQRIS() {
+      const qrisImage = document.getElementById('qrisImage');
+      const a = document.createElement('a');
+      a.href = qrisImage.src;
+      a.download = 'qris_emosoft.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</body>
+</html>

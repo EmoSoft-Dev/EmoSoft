@@ -6,17 +6,19 @@
   <title>Blog - EmoSoft</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
   <script src="script.js" defer></script>
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">EmoSoft</div>
+      <div class="logo" id="site-logo">EmoSoft</div>
       <nav>
         <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
           <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
-          <li role="none"><a role="menuitem" href="tools.html">Tools</a></li>
-          <li role="none"><a role="menuitem" href="blog.html" class="active">Blog</a></li> <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="shop.html">Shop</a></li> <li role="none"><a role="menuitem" href="blog.html" class="active">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html">Donasi</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
@@ -73,11 +75,11 @@
 
   <footer>
     <div class="container footer-content">
-      <p>&copy; 2025 EmoSoft. All rights reserved.</p>
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
       <div class="social-icons">
-        <a href="#" aria-label="Facebook">📘</a>
-        <a href="#" aria-label="Twitter">🐦</a>
-        <a href="#" aria-label="Instagram">📸</a>
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
       </div>
     </div>
   </footer>

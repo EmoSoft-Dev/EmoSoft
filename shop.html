@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop - EmoSoft</title> <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo" id="site-logo">EmoSoft</div>
+      <nav>
+        <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
+          <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
+          <li role="none"><a role="menuitem" href="shop.html" class="active">Shop</a></li> <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html">Donasi</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container tools-section"> <h1>Shop EmoSoft</h1> <p class="intro">Temukan berbagai tools digital praktis dan layanan utama kami.</p> <div class="tools-grid">
+
+      <div class="tool-card">
+        <h3>Shop Panel</h3>
+        <p>Jelajahi berbagai produk dan layanan digital terbaik dari EmoSoft, mulai dari script hingga hosting game. Temukan solusi yang tepat untuk kebutuhan Anda!</p>
+        <button onclick="window.location.href='shop-panel.html'">Kunjungi Shop</button>
+      </div>
+
+      <div class="tool-card">
+        <h3>Shop Script</h3>
+        <p>Pilih script bot WhatsApp sesuai kebutuhanmu. Semua script mudah digunakan dan siap pakai.</p>
+        <button onclick="window.location.href='shop-script.html'">Lihat Script</button>
+      </div>
+
+      <div class="tool-card server-monitor-card">
+        <h3>Status Server</h3>
+        <p>Lihat status dan penggunaan sumber daya server game EmoSoft secara real-time.</p>
+        <div class="server-stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">Address</span>
+            <span class="stat-value">EmonSoft</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Uptime</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">CPU Load</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Memory</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item disk-item">
+            <span class="stat-label">Disk</span>
+            <span class="stat-value">543.83 MiB / 5.96 GiB</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Network (Inbound)</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Network (Outbound)</span>
+            <span class="stat-value status-offline">Offline</span>
+          </div>
+        </div>
+        <div class="server-graphs">
+            <div class="graph-placeholder">
+                <p>CPU Load</p>
+                <div class="graph-area"></div>
+            </div>
+            <div class="graph-placeholder">
+                <p>Memory</p>
+                <div class="graph-area"></div>
+            </div>
+            <div class="graph-placeholder">
+                <p>Network</p>
+                <div class="graph-area"></div>
+            </div>
+        </div>
+        <button onclick="alert('Fitur ini menampilkan status server secara statis. Untuk data real-time, pengembangan lebih lanjut diperlukan!')">Lihat Detail</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop Panel - EmoSoft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo" id="site-logo">EmoSoft</div>
+      <nav>
+        <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
+          <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
+          <li role="none"><a role="menuitem" href="shop.html" class="active">Shop</a></li> <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html">Donasi</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container shop-panel-section">
+    <h1>Daftar Panel EmoSoft</h1>
+    <p class="intro">Temukan berbagai pilihan panel hosting dengan harga terbaik sesuai kebutuhan server Anda. Hubungi kami via WhatsApp untuk pemesanan!</p>
+
+    <div class="panel-list-grid">
+      <article class="panel-card">
+        <h3 data-package-name="Panel Basic">Panel Basic</h3>
+        <p class="panel-price"></p>
+        <ul>
+          <li>CPU: 1 Core</li>
+          <li>RAM: 1 GB</li>
+          <li>Disk: 10 GB SSD</li>
+          <li>Traffic: Unlimited</li>
+          <li>Fitur: Pterodactyl Panel, Full Akses FTP</li>
+        </ul>
+        <div class="card-buttons">
+          <a href="#" class="buy-now-btn" data-package-name="Panel Basic">Pesan Sekarang</a>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <h3 data-package-name="Panel Standard">Panel Standard</h3>
+        <p class="panel-price"></p>
+        <ul>
+          <li>CPU: 2 Core</li>
+          <li>RAM: 2 GB</li>
+          <li>Disk: 20 GB SSD</li>
+          <li>Traffic: Unlimited</li>
+          <li>Fitur: Pterodactyl Panel, Full Akses FTP, Backup Mingguan</li>
+        </ul>
+        <div class="card-buttons">
+          <a href="#" class="buy-now-btn" data-package-name="Panel Standard">Pesan Sekarang</a>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <h3 data-package-name="Panel Pro">Panel Pro</h3>
+        <p class="panel-price"></p>
+        <ul>
+          <li>CPU: 4 Core</li>
+          <li>RAM: 4 GB</li>
+          <li>Disk: 40 GB SSD</li>
+          <li>Traffic: Unlimited</li>
+          <li>Fitur: Pterodactyl Panel, Full Akses FTP, Backup Harian, Support Prioritas</li>
+        </ul>
+        <div class="card-buttons">
+          <a href="#" class="buy-now-btn" data-package-name="Panel Pro">Pesan Sekarang</a>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <h3 data-package-name="Panel Ultra">Panel Ultra</h3>
+        <p class="panel-price"></p>
+        <ul>
+          <li>CPU: 8 Core</li>
+          <li>RAM: 8 GB</li>
+          <li>Disk: 80 GB NVMe</li>
+          <li>Traffic: Unlimited Premium</li>
+          <li>Fitur: Pterodactyl Panel, Full Akses FTP, Backup Real-time, Support 24/7</li>
+        </ul>
+        <div class="card-buttons">
+          <a href="#" class="buy-now-btn" data-package-name="Panel Ultra">Pesan Sekarang</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

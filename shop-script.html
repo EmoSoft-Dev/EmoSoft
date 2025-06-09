@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shop Script - EmoSoft</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo" id="site-logo">EmoSoft</div>
+      <nav>
+        <ul class="nav-links" id="primary-navigation" role="menubar" aria-label="Navigasi utama">
+          <li role="none"><a role="menuitem" href="index.html">Beranda</a></li>
+          <li role="none"><a role="menuitem" href="shop.html" class="active">Shop</a></li> <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="kontak.html">Kontak</a></li>
+          <li role="none"><a role="menuitem" href="donasi.html">Donasi</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Buka menu navigasi" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main class="container shop-script-section">
+    <h1>Daftar Script EmoSoft</h1>
+    <p class="intro">Pilih script bot WhatsApp sesuai kebutuhanmu. Semua script mudah digunakan dan siap pakai dengan harga terbaik!</p>
+
+    <div class="script-list-grid">
+      <article class="script-card">
+        <h3 data-script-name="Bot WhatsApp Premium">Bot WhatsApp Premium</h3>
+        <p class="script-price"></p>
+        <ul>
+          <li>Fitur Lengkap (Auto-reply, Anti-link, dll.)</li>
+          <li>Support Multi-device</li>
+          <li>Update Fitur Berkala</li>
+          <li>Instalasi Mudah</li>
+          <li>Dukungan Prioritas</li>
+        </ul>
+        <a href="#" class="buy-now-btn" data-script-name="Bot WhatsApp Premium">Beli Sekarang</a>
+      </article>
+
+      <article class="script-card">
+        <h3 data-script-name="Bot WhatsApp Sederhana">Bot WhatsApp Sederhana</h3>
+        <p class="script-price"></p>
+        <ul>
+          <li>Cocok untuk Pemula</li>
+          <li>Bot Ringan dan Cepat</li>
+          <li>Fitur Dasar yang Esensial</li>
+          <li>Dokumentasi Lengkap</li>
+          <li>Dukungan Standar</li>
+        </ul>
+        <a href="#" class="buy-now-btn" data-script-name="Bot WhatsApp Sederhana">Beli Sekarang</a>
+      </article>
+
+      <article class="script-card">
+        <h3 data-script-name="Script Auto Downloader">Script Auto Downloader</h3>
+        <p class="script-price"></p>
+        <ul>
+          <li>Download Media dari TikTok, IG, YouTube</li>
+          <li>Tanpa Watermark</li>
+          <li>Cepat dan Efisien</li>
+          <li>Mudah Digunakan</li>
+          <li>Dukungan Teknis</li>
+        </ul>
+        <a href="#" class="buy-now-btn" data-script-name="Script Auto Downloader">Beli Sekarang</a>
+      </article>
+
+      <article class="script-card">
+        <h3 data-script-name="Script Anti-Spam WA">Script Anti-Spam WA</h3>
+        <p class="script-price"></p>
+        <ul>
+          <li>Deteksi & Blokir Pesan Spam Otomatis</li>
+          <li>Filter Link Mencurigakan</li>
+          <li>Pengaturan Kata Kunci Terlarang</li>
+          <li>Melindungi Grup dari Konten Tidak Diinginkan</li>
+        </ul>
+        <a href="#" class="buy-now-btn" data-script-name="Script Anti-Spam WA">Beli Sekarang</a>
+      </article>
+
+      <article class="script-card">
+        <h3 data-script-name="Script Management Grup WA">Script Management Grup WA</h3>
+        <p class="script-price"></p>
+        <ul>
+          <li>Otomatisasi Admin Grup</li>
+          <li>Selamat Datang Anggota Baru</li>
+          <li>Kick Otomatis Anggota Melanggar Aturan</li>
+          <li>Laporan Aktivitas Grup</li>
+        </ul>
+        <a href="#" class="buy-now-btn" data-script-name="Script Management Grup WA">Beli Sekarang</a>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p id="footer-copyright">&copy; 2025 EmoSoft. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><img src="assets/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#" aria-label="Twitter"><img src="assets/twitter.png" alt="Twitter" class="social-icon"></a>
+        <a href="#" aria-label="Instagram"><img src="assets/instagram.png" alt="Instagram" class="social-icon"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
